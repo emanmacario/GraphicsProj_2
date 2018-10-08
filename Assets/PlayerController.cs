@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
@@ -12,11 +13,12 @@ public class PlayerController : MonoBehaviour {
     private float DEFAULT_MAX_TRANSLATE_SPEED = 5;
     private Transform tf;
     private Rigidbody rb;
-    private bool isJumping;
+    private bool canJump;
 
     public void Start() {
         tf = this.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
+        canJump = false;
         if (translateForce < 0) translateForce = DEFAULT_TRANSLATE_FORCE;
         if (jumpForce < 0) jumpForce = DEFAULT_JUMP_FORCE;
         if (maxTranslateSpeed < 0) maxTranslateSpeed = DEFAULT_MAX_TRANSLATE_SPEED;
@@ -30,17 +32,16 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
         if (Input.GetKey("s") || Input.GetKey("o")) rb.AddForce(translateMag * Vector3.back);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
-        if (Input.GetKeyDown("space") && !isJumping) rb.AddForce(jumpForce * Vector3.up);
-
+        if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * Vector3.up);
 
     }
 
-    public void OnCollisionEnter(Collision c) {
-        isJumping = false;
+    public void OnTriggerEnter(Collider c) {
+        if (c.name == "JumpPlane") canJump = true;
     }
 
-    public void OnCollisionExit(Collision c) {
-        isJumping = true;
+    public void OnTriggerExit(Collider c) {
+        if (c.name == "JumpPlane") canJump = false;
     }
 
 }
