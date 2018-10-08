@@ -18,9 +18,9 @@ public class PlayerController : MonoBehaviour {
     public void Start() {
         tf = this.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
-        translateForce = (translateForce < 0) ? DEFAULT_TRANSLATE_FORCE : translateForce;
-        jumpForce = (jumpForce < 0) ? DEFAULT_JUMP_FORCE : jumpForce;
-        maxTranslateSpeed = (maxTranslateSpeed < 0) ? DEFAULT_MAX_TRANSLATE_SPEED : maxTranslateSpeed;
+        if (translateForce < 0) translateForce = DEFAULT_TRANSLATE_FORCE;
+        if (jumpForce < 0) jumpForce = DEFAULT_JUMP_FORCE;
+        if (maxTranslateSpeed < 0) maxTranslateSpeed = DEFAULT_MAX_TRANSLATE_SPEED;
     }
 
     // Restrict ONLY speed along the XZ plane
@@ -38,13 +38,11 @@ public class PlayerController : MonoBehaviour {
 
         float translateMag = translateForce * Time.deltaTime;
 
-        if (Input.GetKey("w") || Input.GetKey(",")) { rb.AddForce(translateMag * Vector3.forward); }
-        if (Input.GetKey("a") || Input.GetKey("a")) { rb.AddForce(translateMag * Vector3.left); }
-        if (Input.GetKey("s") || Input.GetKey("o")) { rb.AddForce(translateMag * Vector3.back); }
-        if (Input.GetKey("d") || Input.GetKey("e")) { rb.AddForce(translateMag * Vector3.right); }
-        if (Input.GetKey("space") && !isJumping) {
-            rb.AddForce(jumpForce * Vector3.up);
-        }
+        if (Input.GetKey("w") || Input.GetKey(",")) rb.AddForce(translateMag * Vector3.forward);
+        if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
+        if (Input.GetKey("s") || Input.GetKey("o")) rb.AddForce(translateMag * Vector3.back);
+        if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
+        if (Input.GetKey("space") && !isJumping) rb.AddForce(jumpForce * Vector3.up);
 
         clampTranslationSpeed();
 
