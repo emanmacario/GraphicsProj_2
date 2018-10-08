@@ -25,15 +25,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void Update() {
-
         float translateMag = translateForce * Time.deltaTime;
-
-        if (Input.GetKey("w") || Input.GetKey(",")) rb.AddForce(translateMag * Vector3.forward);
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
-        if (Input.GetKey("s") || Input.GetKey("o")) rb.AddForce(translateMag * Vector3.back);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
         if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * Vector3.up);
-
     }
 
     public void OnTriggerEnter(Collider c) {
