@@ -32,7 +32,7 @@ Shader "Unlit/Invisible"
 				float3 viewDir : TEXCOORD1;
 			};
 
-			// Implementation of the vertex shader
+			
 			vertOut vert(vertIn v)
 			{
 				vertOut o;
@@ -44,7 +44,7 @@ Shader "Unlit/Invisible"
 				return o;
 			}
 			
-			// Implementation of the fragment shader
+			
 			fixed4 frag(vertOut v) : SV_Target
 			{
 				float3 normalDirection = normalize(v.normal);
@@ -61,6 +61,7 @@ Shader "Unlit/Invisible"
 		
 		Pass
         {
+			//TODO: Cast shadows in accordance to the way the thing is rendered (not sure it's possible)
             Tags {"LightMode"="ShadowCaster"}
 
             CGPROGRAM

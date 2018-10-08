@@ -4,21 +4,24 @@ using System.Collections;
 public class LightController : MonoBehaviour {
 
 	public Renderer rend;
-	private Shader shader1;
-	private Shader shader2;
+	private Shader defaultShader;
+	private Shader invisibleShader;
+	public bool isInvisible = false;
 	
 	public void Start() {
 		rend = GetComponent<Renderer>();
-		shader1 = rend.material.shader;
-		shader2 = Shader.Find("Unlit/Invisible");
+		defaultShader = rend.material.shader;
+		invisibleShader = Shader.Find("Unlit/Invisible");
 	}
 
 	public void Update() {
 		if (Input.GetKeyDown("r")){
-			if (rend.material.shader == shader1){
-				rend.material.shader = shader2;
+			if (rend.material.shader == defaultShader){
+				rend.material.shader = invisibleShader;
+				isInvisible = true;
 			} else {
-				rend.material.shader = shader1;
+				rend.material.shader = defaultShader;
+				isInvisible = false;
 			}
 		}
 	}
