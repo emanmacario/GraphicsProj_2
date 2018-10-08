@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour {
     private Transform tf;
     private Rigidbody rb;
     private bool isJumping;
-    private Vector3 clamped;
 
     public void Start() {
         tf = this.transform;
@@ -21,17 +20,6 @@ public class PlayerController : MonoBehaviour {
         if (translateForce < 0) translateForce = DEFAULT_TRANSLATE_FORCE;
         if (jumpForce < 0) jumpForce = DEFAULT_JUMP_FORCE;
         if (maxTranslateSpeed < 0) maxTranslateSpeed = DEFAULT_MAX_TRANSLATE_SPEED;
-    }
-
-    // Restrict ONLY speed along the XZ plane
-    // Leave gravity (along Y-axis) unchanged
-    private void clampTranslationSpeed() {
-        Vector3 rbVel = rb.velocity;
-        clamped = Vector3.zero;
-        clamped.x = rbVel.x; clamped.z = rbVel.z;
-        clamped = Vector3.ClampMagnitude(clamped, maxTranslateSpeed);
-        clamped.y = rbVel.y;
-        rb.velocity = clamped;
     }
 
     public void Update() {
@@ -44,7 +32,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
         if (Input.GetKeyDown("space") && !isJumping) rb.AddForce(jumpForce * Vector3.up);
 
-        clampTranslationSpeed();
 
     }
 
