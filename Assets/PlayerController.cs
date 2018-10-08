@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
         if (Input.GetKey("s") || Input.GetKey("o")) rb.AddForce(translateMag * Vector3.back);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
-        if (Input.GetKey("space") && !isJumping) rb.AddForce(jumpForce * Vector3.up);
+        if (Input.GetKeyDown("space") && !isJumping) rb.AddForce(jumpForce * Vector3.up);
 
         clampTranslationSpeed();
 
