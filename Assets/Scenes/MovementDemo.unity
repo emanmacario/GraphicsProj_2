@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translateForce: 1000
-  jumpForce: 200
+  jumpForce: 400
 --- !u!1001 &464480261
 Prefab:
   m_ObjectHideFlags: 0
