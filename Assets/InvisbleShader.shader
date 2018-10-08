@@ -6,10 +6,9 @@ Shader "Unlit/Invisible"
 		_Colour ("Color", Color) = (0, 0, 0, 0.1)
 	}
 	SubShader {
-		
-		Pass {
-			Tags { "Queue" = "Transparent" } 
-			ZWrite Off // don't occlude other objects
+		Tags { "Queue" = "Transparent+100" }
+		Pass {			
+			ZWrite Off
 			Blend SrcAlpha OneMinusSrcAlpha
 
 			CGPROGRAM
@@ -38,12 +37,8 @@ Shader "Unlit/Invisible"
 			{
 				vertOut o;
 				
-				
-				// Transform vertex in world coordinates to camera coordinates
-				float4 worldVertex = mul(UNITY_MATRIX_MVP, v.vertex);
-				o.vertex = worldVertex;
-				
-				o.viewDir = normalize(_WorldSpaceCameraPos - mul(unity_ObjectToWorld, v.vertex).xyz);
+				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);				
+				o.viewDir = normalize(_WorldSpaceCameraPos - mul(unity_ObjectToWorld, v.vertex).xyz);				
 				o.normal = normalize(mul(transpose((float3x3)unity_WorldToObject), v.normal.xyz));
 
 				return o;
