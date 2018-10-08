@@ -309,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translateForce: 1000
   jumpForce: 400
+  maxTranslateSpeed: 8
 --- !u!1001 &464480261
 Prefab:
   m_ObjectHideFlags: 0
