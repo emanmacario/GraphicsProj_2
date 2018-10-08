@@ -468,6 +468,11 @@ Prefab:
       propertyPath: translateForce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 54194653349396998, guid: 3522792938a5e91428884fcc22c4b920,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 56
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3522792938a5e91428884fcc22c4b920, type: 2}
   m_IsPrefabParent: 0
