@@ -20,7 +20,13 @@ public class EnemyController : MonoBehaviour {
         rb.AddForce(Time.deltaTime * agility * dir);
     }
 
-    public void OnTriggerEnter(Collider c) {
+    public void OnCollisionEnter(Collision c) {
+        if (c.gameObject.name.Contains("RadA")) {
+            rb.AddForce(100 * Vector3.up);
+        }
+        if (c.gameObject.name.Contains("RadB")) {
+            rb.AddForce(100 * Vector3.down);
+        }
     }
 
     public void OnTriggerExit(Collider c) {
