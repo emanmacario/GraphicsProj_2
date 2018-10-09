@@ -18,4 +18,9 @@ public class Beta : MonoBehaviour {
         tf.Translate(Time.deltaTime * speed * dir);
     }
 
+    public void OnTriggerEnter(Collider c) {
+        if (c.name.Contains("plat")) dir = -dir;
+    }
+
+
 }
