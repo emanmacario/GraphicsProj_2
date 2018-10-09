@@ -2,16 +2,15 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class Beta : MonoBehaviour {
+public class Projectile : MonoBehaviour {
 
     public float speed;
+    public Vector3 dir;
 
     private Transform tf;
-    private Vector3 dir;
 
-    public void Start() {
+    public virtual void Start() {
         tf = this.gameObject.transform;
-        dir = Vector3.Normalize(Vector3.right);
     }
 
     public void Update() {
@@ -19,8 +18,7 @@ public class Beta : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider c) {
-        if (c.name.Contains("plat")) dir = -dir;
+        if (c.name.Contains("plat")) Destroy(this.gameObject);
     }
-
 
 }
