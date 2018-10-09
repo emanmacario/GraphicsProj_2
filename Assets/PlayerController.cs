@@ -11,15 +11,17 @@ public class PlayerController : MonoBehaviour {
 
     private float DEFAULT_TRANSLATE_FORCE = 1000;
     private float DEFAULT_JUMP_FORCE = 50;
+    private Camera cam;
     private Transform tf;
     private Rigidbody rb;
     private bool canJump;
 
-    private void fire(GameObject type) {
-        Instantiate(type, tf.position, Quaternion.identity);
+    private void fire(GameObject type, Vector3 target) {
+        Instantiate(type, target, Quaternion.identity);
     }
 
     public void Start() {
+        cam = Camera.main;
         tf = this.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
         canJump = false;
@@ -32,8 +34,16 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
         if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * Vector3.up);
-        if (Input.GetMouseButtonDown(0)) fire(typeA);
-        if (Input.GetMouseButtonDown(1)) fire(typeB);
+
+        bool L = Input.GetMouseButtonDown(0);
+        bool R = Input.GetMouseButtonDown(1);
+        if (L || R) {
+            Vector2 mouse = Input.mousePosition;
+            Vector3 target = cam.ScreenToWorldPoint(new Vector3(mouse.x, mouse.y, -cam.gameObject.transform.position.z));
+            if (L) fire(typeA, target);
+            if (R) fire(typeB, target);
+        }
+
     }
 
     public void OnTriggerEnter(Collider c) {
