@@ -18,4 +18,9 @@ public class Alpha : MonoBehaviour {
         tf.Translate(Time.deltaTime * speed * dir);
     }
 
+    public void OnTriggerEnter(Collider c) {
+        if (c.name.Contains("plat")) Destroy(this.gameObject);
+    }
+
+
 }
