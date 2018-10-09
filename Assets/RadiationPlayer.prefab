@@ -113,9 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b72e256556823247a5644e685b92b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  type1: {fileID: 0}
-  type2: {fileID: 0}
+  player: {fileID: 1186723728261376}
+  typeA: {fileID: 1895102615614330, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
+  typeB: {fileID: 1417944180112780, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
 --- !u!114 &114765066796627686
 MonoBehaviour:
   m_ObjectHideFlags: 1

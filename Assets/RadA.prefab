@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33241604122071450}
   - component: {fileID: 23835515789312096}
   - component: {fileID: 135444634788111830}
+  - component: {fileID: 114300999283434138}
   m_Layer: 0
   m_Name: RadA
   m_TagString: Untagged
@@ -84,6 +85,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895102615614330}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114300999283434138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895102615614330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78545258d5723da41ac7f94af925fa42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135444634788111830
 SphereCollider:
   m_ObjectHideFlags: 1
