@@ -594,26 +594,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 54194653349396998, guid: 3522792938a5e91428884fcc22c4b920,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114765066796627686, guid: 3522792938a5e91428884fcc22c4b920,
-        type: 2}
-      propertyPath: jumpForce
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 114765066796627686, guid: 3522792938a5e91428884fcc22c4b920,
-        type: 2}
-      propertyPath: translateForce
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 54194653349396998, guid: 3522792938a5e91428884fcc22c4b920,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3522792938a5e91428884fcc22c4b920, type: 2}
   m_IsPrefabParent: 0
