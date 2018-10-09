@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23835515789312096}
   - component: {fileID: 135444634788111830}
   m_Layer: 0
-  m_Name: Radiation1
+  m_Name: RadA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
