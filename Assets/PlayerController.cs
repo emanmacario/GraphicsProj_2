@@ -6,11 +6,9 @@ public class PlayerController : MonoBehaviour {
 
     public float translateForce = -1;
     public float jumpForce = -1;
-    public float maxTranslateSpeed = -1;
 
     private float DEFAULT_TRANSLATE_FORCE = 1000;
     private float DEFAULT_JUMP_FORCE = 50;
-    private float DEFAULT_MAX_TRANSLATE_SPEED = 5;
     private Transform tf;
     private Rigidbody rb;
     private bool canJump;
@@ -21,7 +19,6 @@ public class PlayerController : MonoBehaviour {
         canJump = false;
         if (translateForce < 0) translateForce = DEFAULT_TRANSLATE_FORCE;
         if (jumpForce < 0) jumpForce = DEFAULT_JUMP_FORCE;
-        if (maxTranslateSpeed < 0) maxTranslateSpeed = DEFAULT_MAX_TRANSLATE_SPEED;
     }
 
     public void Update() {
