@@ -324,7 +324,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1895102615614330, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
       propertyPath: m_Name
-      value: Sphere
+      value: Alpha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
@@ -481,7 +481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1417944180112780, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
       propertyPath: m_Name
-      value: Sphere
+      value: Beta
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
