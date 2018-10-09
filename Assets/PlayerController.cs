@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour {
     private bool canJump;
 
     private void fire(GameObject type, Vector3 target) {
-        Instantiate(type, target, Quaternion.identity);
+        GameObject g = Instantiate(type, tf.position, Quaternion.identity);
+        Projectile p = g.GetComponent<Projectile>();
+        p.setDir(target - tf.position);
     }
 
     public void Start() {
