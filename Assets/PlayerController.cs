@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public float translateForce = -1;
     public float jumpForce = -1;
+    public float recoilForce;
     public float fireDelay;
     public GameObject typeA;
     public GameObject typeB;
@@ -21,7 +22,9 @@ public class PlayerController : MonoBehaviour {
     private void fire(GameObject type, Vector3 target) {
         GameObject g = Instantiate(type, tf.position, Quaternion.identity);
         Projectile p = g.GetComponent<Projectile>();
-        p.setDir(target - tf.position);
+        Vector3 dir = target - tf.position;
+        p.setDir(dir);
+        rb.AddForce(recoilForce * -dir);
     }
 
     public void Start() {
