@@ -4,12 +4,18 @@ using System.Collections;
 
 public class Beta : MonoBehaviour {
 
+    public float speed;
+
+    private Transform tf;
+    private Vector3 dir;
+
     public void Start() {
-        Console.WriteLine("Start Beta");
+        tf = this.gameObject.transform;
+        dir = Vector3.Normalize(Vector3.right);
     }
 
     public void Update() {
-        Console.WriteLine("Update Beta");
+        tf.Translate(Time.deltaTime * speed * dir);
     }
 
 }
