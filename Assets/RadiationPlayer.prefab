@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 135869016863271026}
   - component: {fileID: 54194653349396998}
   - component: {fileID: 114765066796627686}
-  - component: {fileID: 114180073814710918}
   m_Layer: 0
   m_Name: RadiationPlayer
   m_TagString: Untagged
@@ -102,20 +101,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!114 &114180073814710918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186723728261376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b72e256556823247a5644e685b92b05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1186723728261376}
-  typeA: {fileID: 1895102615614330, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
-  typeB: {fileID: 1417944180112780, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
 --- !u!114 &114765066796627686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translateForce: 1200
   jumpForce: 800
+  typeA: {fileID: 1895102615614330, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
+  typeB: {fileID: 1417944180112780, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
 --- !u!135 &135869016863271026
 SphereCollider:
   m_ObjectHideFlags: 1

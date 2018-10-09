@@ -6,12 +6,18 @@ public class PlayerController : MonoBehaviour {
 
     public float translateForce = -1;
     public float jumpForce = -1;
+    public GameObject typeA;
+    public GameObject typeB;
 
     private float DEFAULT_TRANSLATE_FORCE = 1000;
     private float DEFAULT_JUMP_FORCE = 50;
     private Transform tf;
     private Rigidbody rb;
     private bool canJump;
+
+    private void fire(GameObject type) {
+        Instantiate(type, tf.position, Quaternion.identity);
+    }
 
     public void Start() {
         tf = this.transform;
@@ -26,6 +32,8 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
         if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * Vector3.up);
+        if (Input.GetMouseButtonDown(0)) fire(typeA);
+        if (Input.GetMouseButtonDown(1)) fire(typeB);
     }
 
     public void OnTriggerEnter(Collider c) {
