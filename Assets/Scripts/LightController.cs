@@ -7,6 +7,7 @@ public class LightController : MonoBehaviour {
 	private Shader defaultShader;
 	private Shader invisibleShader;
 	public bool isInvisible = false;
+	public float radius = 5;
 	
 	public void Start() {
 		rend = GetComponent<Renderer>();
