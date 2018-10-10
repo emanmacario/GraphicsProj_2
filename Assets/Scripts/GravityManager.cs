@@ -16,7 +16,7 @@ public class GravityManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.F))
 		{
 			changeGravity = !changeGravity;
-			gameObject.GetComponent<PlayerController>().ReverseJumpDirection();
+			/* gameObject.GetComponent<PlayerController>().ReverseJumpDirection(); */
 		}
 	}
 
