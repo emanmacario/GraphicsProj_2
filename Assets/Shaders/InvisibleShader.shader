@@ -3,7 +3,7 @@
 Shader "Unlit/Invisible"
 {
 	Properties {
-		_Colour ("Color", Color) = (0, 0, 0, 0.1)
+		_InvisiColour ("Color", Color) = (0, 0, 0, 0.05)
 	}
 	SubShader {
 		Tags { "Queue" = "Transparent+100" }
@@ -17,7 +17,7 @@ Shader "Unlit/Invisible"
 
 			#include "UnityCG.cginc"
  
-			uniform float4 _Colour;
+			uniform float4 _InvisiColour;
 
 			struct vertIn
 			{
@@ -50,9 +50,9 @@ Shader "Unlit/Invisible"
 				float3 normalDirection = normalize(v.normal);
 				float3 viewDirection = normalize(v.viewDir);
  
-				float newOpacity = min(1.0, _Colour.a 
-					/ pow(abs(dot(viewDirection, normalDirection)), 1));
-				return float4(_Colour.rgb, newOpacity);
+				float newOpacity = min(1.0, _InvisiColour.a 
+					/ pow(abs(dot(viewDirection, normalDirection)), 1.5));
+				return float4(_InvisiColour.rgb, newOpacity);
 			}
 
 			ENDCG
