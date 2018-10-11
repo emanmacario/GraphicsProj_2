@@ -17,7 +17,7 @@
 			 "RenderType"="Transparent"
 		}        
 		LOD 200
-
+		ZWrite Off
 		CGPROGRAM
 		#pragma surface surf CelShadingForward fullforwardshadows alpha
 		#pragma target 3.0
