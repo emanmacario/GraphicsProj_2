@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInvisible: 0
-  radius: 10
+  radius: 8
 --- !u!1 &929160831 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d,
@@ -1199,7 +1199,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1243,6 +1243,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 854520294}
+    - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114325923173343760, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
