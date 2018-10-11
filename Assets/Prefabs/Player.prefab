@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translateForce: 1200
-  jumpForce: 800
+  jumpForce: 120
   recoilForce: 20
   fireDelay: 0.1
   typeA: {fileID: 1895102615614330, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
