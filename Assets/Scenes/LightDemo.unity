@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -400,7 +400,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 625374341}
   m_LocalRotation: {x: 0.08135674, y: -0, z: -0, w: 0.9966851}
-  m_LocalPosition: {x: 0, y: 10, z: -0.00000016228414}
+  m_LocalPosition: {x: 0, y: 5, z: -0.00000016228414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -411,6 +411,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1519243443548498, guid: 9edc5da564c3fc84db06a615ccc5042c,
     type: 2}
   m_PrefabInternal: {fileID: 1007620509}
+--- !u!114 &854520294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854520293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a40591db4c76784290ee54a63b96aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisible: 0
+  radius: 5
 --- !u!1001 &1007620509
 Prefab:
   m_ObjectHideFlags: 0
@@ -454,7 +467,13 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114626007434630592, guid: 9edc5da564c3fc84db06a615ccc5042c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114626007434630592, guid: 9edc5da564c3fc84db06a615ccc5042c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9edc5da564c3fc84db06a615ccc5042c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1032248893
@@ -645,6 +664,20 @@ MonoBehaviour:
   player: {fileID: 1519243443548498, guid: 9edc5da564c3fc84db06a615ccc5042c, type: 2}
   speed: 5
   growFactor: 4
+--- !u!114 &1743773553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743773546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 854520293}
+  speed: 5
+  growFactor: 4
 --- !u!1 &1767524817 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d,
@@ -685,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1519243443548498, guid: 9edc5da564c3fc84db06a615ccc5042c, type: 2}
+  player: {fileID: 854520293}
   speed: 5
   growFactor: 4
 --- !u!4 &2098014461 stripped

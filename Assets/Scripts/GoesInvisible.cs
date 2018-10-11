@@ -8,7 +8,7 @@ public class GoesInvisible : MonoBehaviour {
     private LightController lightController;
 	private float startRad = 0;
 	
-	private float shrinkTime, growTime, curRad = 0;
+	private float shrinkTime, growTime;
 	public float speed = 5;
 	public float growFactor = 4;
 
