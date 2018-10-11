@@ -14,6 +14,10 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void Update() {
+		LightController lc = player.GetComponent<LightController>();
+		if (lc != null) {
+			if (lc.isInvisible) return;
+		}
         Vector3 self = this.transform.position;
         Vector3 targ = player.transform.position;
         Vector3 dir = (targ - self).normalized;

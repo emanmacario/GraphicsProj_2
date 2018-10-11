@@ -18,6 +18,7 @@
 		}        
 		LOD 200
 		ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
 		CGPROGRAM
 		#pragma surface surf CelShadingForward fullforwardshadows alpha
 		#pragma target 3.0

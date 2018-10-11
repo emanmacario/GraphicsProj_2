@@ -5,21 +5,17 @@ using UnityEngine;
 public class GoesInvisible : MonoBehaviour {
 	
 	public GameObject player;
-    private LightController lightController;
+    //private LightController lightController;
 	private float startRad = 0;
 	
 	private float shrinkTime, growTime;
 	public float speed = 5;
 	public float growFactor = 4;
 
-	// Use this for initialization
-	void Start () {
-        lightController = player.GetComponent<LightController>();
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
+		LightController lightController = player.GetComponent<LightController>();
 		if (lightController.isInvisible) {
 			renderer.material.SetVector("_invPla", lightController.transform.position);
 			
