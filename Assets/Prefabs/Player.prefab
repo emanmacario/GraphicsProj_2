@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135368886064177294}
   - component: {fileID: 54901869890063472}
   - component: {fileID: 114567391327880348}
+  - component: {fileID: 114626007434630592}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -118,6 +119,19 @@ MonoBehaviour:
   fireDelay: 0.1
   typeA: {fileID: 1895102615614330, guid: c2d5eac2216196b4caba333bb22df84d, type: 2}
   typeB: {fileID: 1417944180112780, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
+--- !u!114 &114626007434630592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519243443548498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a40591db4c76784290ee54a63b96aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisible: 0
+  radius: 5
 --- !u!135 &135368886064177294
 SphereCollider:
   m_ObjectHideFlags: 1
