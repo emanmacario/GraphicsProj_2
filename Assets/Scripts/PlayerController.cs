@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
     private Camera cam;
     private Transform tf;
     private Rigidbody rb;
-    private Vector3 gravDir;
     private bool canJump;
     private float timeFiredAgo;
 
@@ -32,7 +31,6 @@ public class PlayerController : MonoBehaviour {
         cam = Camera.main;
         tf = this.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
-        gravDir = Physics.gravity;
         canJump = false;
         timeFiredAgo = 0;
         if (translateForce < 0) translateForce = DEFAULT_TRANSLATE_FORCE;
@@ -43,8 +41,8 @@ public class PlayerController : MonoBehaviour {
         float translateMag = translateForce * Time.deltaTime;
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
-        if (Input.GetKey("f")) gravDir *= -1;
-        if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * -gravDir);
+        if (Input.GetKeyDown("f")) Physics.gravity *= -1;
+        if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * -Physics.gravity);
 
         timeFiredAgo += Time.deltaTime;
         bool L = Input.GetMouseButton(0);
