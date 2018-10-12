@@ -6,6 +6,7 @@ public class GoesInvisible : MonoBehaviour {
 	
 	public GameObject player;
     private LightController lightController;
+    private MeshRenderer renderer;
 	private float startRad = 0;
 	
 	private float shrinkTime, growTime;
@@ -13,12 +14,12 @@ public class GoesInvisible : MonoBehaviour {
 	public float growFactor = 4;
 
     void Start() {
+		renderer = this.gameObject.GetComponent<MeshRenderer>();
         lightController = player.GetComponent<LightController>();
     }
 
 	// Update is called once per frame
 	void Update () {
-		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
 		if (lightController.isInvisible) {
 			renderer.material.SetVector("_invPla", lightController.transform.position);
 			if (growTime < Mathf.PI/2) {
