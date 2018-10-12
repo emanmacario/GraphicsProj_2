@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviour {
         float translateMag = translateForce * Time.deltaTime;
         if (Input.GetKey("a") || Input.GetKey("a")) rb.AddForce(translateMag * Vector3.left);
         if (Input.GetKey("d") || Input.GetKey("e")) rb.AddForce(translateMag * Vector3.right);
-        if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * Vector3.up);
+        if (Input.GetKeyDown("f")) Physics.gravity *= -1;
+        if (Input.GetKeyDown("space") && canJump) rb.AddForce(jumpForce * -Physics.gravity);
 
         timeFiredAgo += Time.deltaTime;
         bool L = Input.GetMouseButton(0);
