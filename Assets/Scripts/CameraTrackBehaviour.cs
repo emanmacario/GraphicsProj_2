@@ -2,12 +2,9 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class ObjectTracker : MonoBehaviour {
+public class CameraTrackBehaviour : MonoBehaviour {
 
     public GameObject target;
-
-    public void Start() {
-    }
 
     public void Update() {
         Vector3 pos = target.transform.position;

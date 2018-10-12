@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class Projectile : MonoBehaviour {
+public class ProjectileBehaviour : MonoBehaviour {
 
     public float lifetime;
     public float speed;
@@ -23,10 +23,6 @@ public class Projectile : MonoBehaviour {
         lived += Time.deltaTime;
         if (lived > lifetime) Destroy(this.gameObject);
         tf.Translate(Time.deltaTime * speed * dir);
-    }
-
-    public void OnTriggerEnter(Collider c) {
-        /* if (c.name.Contains("plat")) Destroy(this.gameObject); */
     }
 
 }

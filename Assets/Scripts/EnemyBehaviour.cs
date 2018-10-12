@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class EnemyController : MonoBehaviour {
+public class EnemyBehaviour : MonoBehaviour {
 
     public float agility;
     public GameObject player;
@@ -18,18 +18,6 @@ public class EnemyController : MonoBehaviour {
         Vector3 targ = player.transform.position;
         Vector3 dir = (targ - self).normalized;
         rb.AddForce(Time.deltaTime * agility * dir);
-    }
-
-    public void OnCollisionEnter(Collision c) {
-        if (c.gameObject.name.Contains("RadA")) {
-            rb.AddForce(100 * Vector3.up);
-        }
-        if (c.gameObject.name.Contains("RadB")) {
-            rb.AddForce(100 * Vector3.down);
-        }
-    }
-
-    public void OnTriggerExit(Collider c) {
     }
 
 }

@@ -2,18 +2,15 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class PlayerMove : MonoBehaviour {
+public class BasicAbility : MonoBehaviour {
 
     public float translateForce = -1;
     public float jumpForce = -1;
 
-    private Transform tf;
     private Rigidbody rb;
     private bool canJump;
 
     public void Start() {
-        cam = Camera.main;
-        tf = this.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
         canJump = false;
     }

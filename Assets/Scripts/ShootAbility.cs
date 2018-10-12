@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class PlayerShoot : MonoBehaviour {
+public class ShootAbility : MonoBehaviour {
 
     public float recoilForce;
     public float fireDelay;
@@ -16,7 +16,7 @@ public class PlayerShoot : MonoBehaviour {
 
     private void fire(GameObject type, Vector3 target) {
         GameObject g = Instantiate(type, tf.position, Quaternion.identity);
-        Projectile p = g.GetComponent<Projectile>();
+        ProjectileBehaviour p = g.GetComponent<ProjectileBehaviour>();
         Vector3 dir = target - tf.position;
         p.setDir(dir);
         rb.AddForce(recoilForce * -dir);
