@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4499333, g: 0.49998695, b: 0.57554877, a: 1}
+  m_IndirectSpecularColor: {r: 0.44993317, g: 0.49998713, b: 0.57554847, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_Name
@@ -177,7 +177,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114325923173343760, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!4 &52559938 stripped
@@ -346,7 +346,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     - target: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_Name
       value: Platform (4)
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!1 &377734405
@@ -454,7 +454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &377734410
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b869ee0a441334cade29e22484e02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 854520293}
+  target: {fileID: 1425850795}
 --- !u!1001 &378492749
 Prefab:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!1001 &450525679
@@ -634,7 +634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 39.134003, y: 400, z: 88.68301}
 --- !u!1001 &716190968
 Prefab:
@@ -696,7 +696,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114325923173343760, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
@@ -738,7 +738,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_Name
@@ -765,7 +765,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114325923173343760, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
@@ -786,27 +786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
---- !u!1 &854520293 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1519243443548498, guid: 9edc5da564c3fc84db06a615ccc5042c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1007620509}
---- !u!114 &854520294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 854520293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a40591db4c76784290ee54a63b96aea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInvisible: 0
-  radius: 8
 --- !u!1 &929160831 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d,
@@ -828,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!1001 &1007620509
@@ -899,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!4 &1283722383 stripped
@@ -963,7 +945,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     - target: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_Name
       value: Platform (5)
@@ -972,6 +954,24 @@ Prefab:
     - {fileID: 114325923173343760, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1425850795 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1131136374947926, guid: 9edc5da564c3fc84db06a615ccc5042c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007620509}
+--- !u!114 &1425850796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425850795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a40591db4c76784290ee54a63b96aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisible: 0
+  radius: 5
 --- !u!1001 &1587465851
 Prefab:
   m_ObjectHideFlags: 0
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!4 &1696177853 stripped
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e859598893f72e4e87564e38ce356c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 854520293}
+  player: {fileID: 1425850795}
   speed: 5
   growFactor: 4
 --- !u!4 &1747178810 stripped
@@ -1117,7 +1117,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520293}
+      objectReference: {fileID: 1425850795}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a079ed558974cd46858a749a19ea718, type: 2}
   m_IsPrefabParent: 0
@@ -1177,7 +1177,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     - target: {fileID: 1735435003511966, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_Name
       value: Platform (6)
@@ -1223,7 +1223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_LocalScale.z
@@ -1242,7 +1242,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 854520294}
+      objectReference: {fileID: 0}
     - target: {fileID: 4003708360815754, guid: 15d89d11ab7fb8845a9f1934a31d5a5d, type: 2}
       propertyPath: m_LocalScale.y
       value: 10
