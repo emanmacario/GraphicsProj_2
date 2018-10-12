@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoesInvisible : MonoBehaviour {
+public class InvisibleBehaviour : MonoBehaviour {
 
     public GameObject player;
     public float speed = 5;
