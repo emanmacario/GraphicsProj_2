@@ -10,7 +10,8 @@ public class LightAbility : MonoBehaviour {
     private Shader invisibleShader;
     private bool invisible;
 
-    public bool activated() { return invisible; }
+    public bool isActivated() { return invisible; }
+    public float getRadius() { return radius; }
 
     public void Start() {
         rend = GetComponent<Renderer>();
