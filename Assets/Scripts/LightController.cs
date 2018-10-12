@@ -3,10 +3,11 @@ using System.Collections;
 
 public class LightController : MonoBehaviour {
 
-	public Renderer rend;
+	private Renderer rend;
 	private Shader defaultShader;
 	private Shader invisibleShader;
 	public bool isInvisible = false;
+	public float radius = 5;
 	
 	public void Start() {
 		rend = GetComponent<Renderer>();
