@@ -4,8 +4,8 @@ using System.Collections;
 
 public class ShootAbility : MonoBehaviour {
 
-    public float recoilForce;
-    public float fireDelay;
+    public float recoilForce = 20;
+    public float fireDelay = 0.1f;
     public GameObject typeA;
     public GameObject typeB;
 

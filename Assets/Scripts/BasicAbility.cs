@@ -4,8 +4,8 @@ using System.Collections;
 
 public class BasicAbility : MonoBehaviour {
 
-    public float translateForce = -1;
-    public float jumpForce = -1;
+    public float translateForce = 1200;
+    public float jumpForce = 120;
 
     private Rigidbody rb;
     private bool canJump;

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
 
-    public float agility;
+    public float agility = 100;
     public GameObject player;
 
     private Rigidbody rb;
