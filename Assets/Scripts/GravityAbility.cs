@@ -6,7 +6,7 @@ public class GravityAbility : MonoBehaviour {
 
     private bool canFlipGravity;
 
-    public voi Start() {
+    public void Start() {
         canFlipGravity = false;
     }
 
