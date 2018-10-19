@@ -31,7 +31,6 @@
 				float2 uv : TEXCOORD0;
 				float4 vertex : SV_POSITION;
 				float phase : TEXCOORD1;
-
 			};
 
 			uniform float4 _Base, _Highlight;
