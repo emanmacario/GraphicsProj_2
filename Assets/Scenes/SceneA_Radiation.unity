@@ -278,6 +278,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translateForce: 1200
   jumpForce: 60
+--- !u!114 &390328240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390328238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3df08178afce7438173a4a95298c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelProgressionObject: {fileID: 1616681736}
 --- !u!114 &390328245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1242,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 295b3f45d23ebb04bb5ec8fd687f2c2b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1616681736 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1386606240027294, guid: 295b3f45d23ebb04bb5ec8fd687f2c2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1616681735}
 --- !u!1001 &1626286055
 Prefab:
   m_ObjectHideFlags: 0
