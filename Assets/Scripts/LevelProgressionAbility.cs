@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +12,7 @@ public class LevelProgressionAbility : MonoBehaviour {
         String t = c.tag;
         if (t.Equals("NextLevel")) {
             Console.WriteLine("If player satisfies win condition, move to next level");
-        }
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
     }
-
 }
