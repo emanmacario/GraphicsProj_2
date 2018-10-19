@@ -2,10 +2,18 @@
 {
 	Properties
 	{
+<<<<<<< HEAD
 		_Base ("Base Colour", Color) = (1, 1, 1, 1)
 		_Highlight ("Highlight Colour", Color) = (0, 0, 0, 1)
 		_Waves ("Number of waves", int) = 10
 		_Speed ("Wave speed", float) = 1
+=======
+		_Base ("Highlight Colour", Color) = (1, 1, 1, 1)
+		_Highlight ("Highlight Colour", Color) = (0, 0, 0, 1)
+		_Waves ("Number of waves", int) = 10
+		_Speed ("Wave speed", float) = 1
+		_Narrowness ("Wave narrowness", int) = 4
+>>>>>>> New portal shader with waves effect
 		
 	}
 	SubShader
@@ -16,6 +24,7 @@
 		Pass
 		{
 			CGPROGRAM
+
 			#pragma vertex vert
 			#pragma fragment frag
 			
