@@ -5,7 +5,7 @@ using System.Collections;
 public class BasicAbility : MonoBehaviour {
 
     public float translateForce = 1200;
-    public float jumpForce = 120;
+    public float jumpForce = 60;
 
     private Rigidbody rb;
     private bool canJump;
