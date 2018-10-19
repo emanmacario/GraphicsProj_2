@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Visibility
-  m_Shader: {fileID: 4800000, guid: d0f0355931e729640be5ca8dea9b2500, type: 3}
+  m_Name: HaloMat
+  m_Shader: {fileID: 4800000, guid: 8f75092ca1543e14e89256f892f217fb, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -60,7 +60,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.8
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -71,14 +71,6 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _invRad: -1
-    - _l1: 0
-    - _l2: 0.3
-    - _l3: 0.5
-    - _t1: 0
-    - _t2: 0.3
-    - _t3: 0.5
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _invPla: {r: 0, g: 0, b: 100, a: 1}

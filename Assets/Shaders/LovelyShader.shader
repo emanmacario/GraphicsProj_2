@@ -12,21 +12,19 @@
 		_l3("Level 3", float) = 0.5
 	}
 	SubShader {
-		Tags {
-			 "Queue"="Transparent" 
-			 "RenderType"="Transparent"
-		}        
 		LOD 200
-		ZWrite Off
-		Blend SrcAlpha OneMinusSrcAlpha
+		Stencil {
+		  Ref 1
+		  Comp NotEqual
+		}
 		CGPROGRAM
-		#pragma surface surf CelShadingForward fullforwardshadows alpha
+		#pragma surface surf CelShadingForward fullforwardshadows
 		#pragma target 3.0
 		//based on code from http://xdavidleon.tumblr.com/post/122950440695/next-gen-cel-shading-in-unity-5
 		
 		#include "UnityCG.cginc"
 		
-		float _t1,_t2,_t3,_l1,_l2,_l3;
+		uniform float _t1,_t2,_t3,_l1,_l2,_l3;
 
 
 		half4 LightingCelShadingForward(SurfaceOutput s, half3 lightDir, half atten) {
@@ -64,5 +62,4 @@
 		ENDCG
 	}
 	FallBack "VertexLit"
-	FallBack "Diffuse"
 }
