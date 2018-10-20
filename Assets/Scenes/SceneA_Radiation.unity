@@ -724,7 +724,7 @@ MonoBehaviour:
   recoilForceA: 5
   recoilForceB: 40
   fireDelayA: 0.1
-  fireDelayB: 2
+  fireDelayB: 1
 --- !u!1001 &455409641
 Prefab:
   m_ObjectHideFlags: 0

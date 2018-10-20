@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 4
-  speed: 8
+  speed: 12
   dir: {x: -1, y: 0, z: 0}
 --- !u!135 &135444634788111830
 SphereCollider:
