@@ -23,8 +23,13 @@ public class BasicAbility : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider c) {
+        String t = c.tag;
         bool normalGravity = Physics.gravity.y < 0;
-        canJump = (normalGravity && c.tag.Equals("JumpUp")) || (!normalGravity && c.tag.Equals("JumpDown"));
+        if (normalGravity && t.Equals("JumpUp")) {
+            canJump = true;
+        } else if (!normalGravity && t.Equals("JumpDown")) {
+            canJump = true;
+        }
     }
 
     public void OnTriggerExit(Collider c) {
