@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33074167994185280}
   - component: {fileID: 23161911684850134}
   - component: {fileID: 135684239250858798}
-  - component: {fileID: 114151053719889106}
+  - component: {fileID: 114006840532227772}
   - component: {fileID: 54503215665954862}
   m_Layer: 0
   m_Name: RadB
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!114 &114151053719889106
+--- !u!114 &114006840532227772
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,10 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1417944180112780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a96aadb55c984ac40827dbf54f3709d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 053b75297329d4446aa442ef4f042ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 4
+  lifetime: 8
   speed: 8
   dir: {x: 1, y: 0, z: 0}
 --- !u!135 &135684239250858798
