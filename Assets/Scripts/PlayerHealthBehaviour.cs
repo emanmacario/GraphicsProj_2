@@ -4,15 +4,15 @@ using System.Collections;
 
 public class PlayerHealthBehaviour : MonoBehaviour {
 
-    public int health = 8;
+    // Time in secs, player can contact enemy before dying
+    public float health = 8;
 
     private Rigidbody rb;
     private MeshRenderer mr;
 
     private void playerDies() {
-        rb.isKinematic = true;
         rb.detectCollisions = false;
-        mr.enabled = false;
+        Console.WriteLine("Player died, go to finish screen");
     }
 
     public void Start() {
@@ -21,16 +21,12 @@ public class PlayerHealthBehaviour : MonoBehaviour {
     }
 
     public void Update() {
-        if (health <= 0) {
-            playerDies();
-        }
+        if (health <= 0) playerDies();
     }
 
-    public void OnCollisionEnter(Collision c) {
+    public void OnCollisionStay(Collision c) {
         String t = c.collider.tag;
-        if (t.Equals("Enemy")) {
-            health--;
-        }
+        if (t.Equals("Enemy")) health -= Time.deltaTime;
     }
 
 }
