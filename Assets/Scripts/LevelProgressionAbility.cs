@@ -8,8 +8,8 @@ public class LevelProgressionAbility : MonoBehaviour {
 
     public GameObject levelProgressionObject;
 
-    private static const float PORTAL_SOUND_TIME = 1.0f;
-    private static const float FREEZE_SCENE = 0.0f;
+    private const float PORTAL_SOUND_TIME = 1.0f;
+    private const float FREEZE_SCENE = 0.0f;
 
     private MeshRenderer mr;
     private AudioManager am;
