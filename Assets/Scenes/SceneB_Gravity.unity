@@ -586,7 +586,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4065182760607718, guid: 9edc5da564c3fc84db06a615ccc5042c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.25
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 4065182760607718, guid: 9edc5da564c3fc84db06a615ccc5042c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -676,7 +676,7 @@ MonoBehaviour:
   typeB: {fileID: 1417944180112780, guid: 8a7f26c7fcd801242a0b7d0e57422d27, type: 2}
   recoilForceA: 5
   recoilForceB: 40
-  fireDelayA: 0.5
+  fireDelayA: 0.1
   fireDelayB: 2
 --- !u!1001 &608314014
 Prefab:
