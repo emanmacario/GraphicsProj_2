@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - RadA
   - RadB
+  - AudioManager
   layers:
   - Default
   - TransparentFX
