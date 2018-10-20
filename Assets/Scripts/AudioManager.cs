@@ -26,4 +26,9 @@ public class AudioManager : MonoBehaviour {
 			s.source.Play();
 		}
 	}
+
+	public void SetMusicVolume(float volume) {
+		Sound s = Array.Find(sounds, sound => sound.name == "MainMenuTheme");
+		s.source.volume = volume;
+	}
 }
