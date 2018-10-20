@@ -8,11 +8,18 @@ public class LevelProgressionAbility : MonoBehaviour {
 
     public GameObject levelProgressionObject;
 
+    private AudioManager am;
+
+    public void Start() {
+        am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     public void OnTriggerEnter(Collider c) {
         String t = c.tag;
         if (t.Equals("NextLevel")) {
-            Console.WriteLine("If player satisfies win condition, move to next level");
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		}
+            am.Play("Portal");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
+
 }

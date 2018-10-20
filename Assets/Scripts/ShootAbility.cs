@@ -14,6 +14,7 @@ public class ShootAbility : MonoBehaviour {
     private Camera cam;
     private Transform tf;
     private Rigidbody rb;
+    private AudioManager am;
     private float timeFiredAgoA;
     private float timeFiredAgoB;
 
@@ -23,6 +24,7 @@ public class ShootAbility : MonoBehaviour {
         Vector3 dir = target - tf.position;
         p.setDir(dir);
         rb.AddForce(recoilForceA * -dir);
+        am.Play("RadAFire");
         timeFiredAgoA = 0;
     }
 
@@ -32,6 +34,7 @@ public class ShootAbility : MonoBehaviour {
         Vector3 dir = target - tf.position;
         p.setDir(dir);
         rb.AddForce(recoilForceB * -dir);
+        am.Play("RadBFire");
         timeFiredAgoB = 0;
     }
 
@@ -39,6 +42,7 @@ public class ShootAbility : MonoBehaviour {
         cam = Camera.main;
         tf = this.gameObject.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
+        am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
         timeFiredAgoA = 0;
         timeFiredAgoB = 0;
     }

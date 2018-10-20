@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
     private Vector3 lastPos;
     private Rigidbody rb;
+    private AudioManager am;
     private LightAbility la;
 
     private void UpdateTrackingMode() {
@@ -24,6 +25,7 @@ public class EnemyBehaviour : MonoBehaviour {
     public void Start() {
         lastPos = Vector3.zero;
         rb = this.GetComponent<Rigidbody>();
+        am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
         la = player.GetComponent<LightAbility>();
     }
 
@@ -37,8 +39,10 @@ public class EnemyBehaviour : MonoBehaviour {
         Vector3 dir = (this.transform.position - player.transform.position).normalized;
         if (t.Equals("RadA")) {
             rb.AddForce(100 * dir);
+            am.Play("ProjectileHitEnemy");
         } else if (t.Equals("RadB")) {
             rb.AddForce(1000 * dir);
+            am.Play("ProjectileHitEnemy");
         }
     }
 

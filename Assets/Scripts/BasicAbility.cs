@@ -29,7 +29,6 @@ public class BasicAbility : MonoBehaviour {
 
     public void OnCollisionEnter(Collision c) {
         String t = c.gameObject.tag;
-        Console.WriteLine(t);
         if (t.Equals("PlatV2")) am.Play("LandAfterJump");
     }
 

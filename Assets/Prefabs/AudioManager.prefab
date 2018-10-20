@@ -22,11 +22,11 @@ GameObject:
   - component: {fileID: 114512090952686412}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4719449810699342
 Transform:
   m_ObjectHideFlags: 1
@@ -79,6 +79,71 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: f64dc189401b8a34aa0a84e3a783b9ac, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: RadAFire
+    clip: {fileID: 8300000, guid: 7b5172041fc27fa4892d4c453dfcaaeb, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: RadBFire
+    clip: {fileID: 8300000, guid: 73fa0d09119f0c84082d4962de0bb49a, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: LandAfterJump
+    clip: {fileID: 8300000, guid: 86e497d49726c7947806e0619601b761, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: ProjectileHitEnemy
+    clip: {fileID: 8300000, guid: bececce9b6cb0224abe560fbbe456884, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
     volume: 0.5
     loop: 0
     source: {fileID: 0}
