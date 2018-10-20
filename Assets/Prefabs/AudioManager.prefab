@@ -107,9 +107,9 @@ MonoBehaviour:
     volume: 0.5
     loop: 0
     source: {fileID: 0}
-  - name: Portal
-    clip: {fileID: 8300000, guid: 35f94a5fa4dc07e45a95ee52bf586382, type: 3}
-    volume: 0.5
+  - name: Pickup
+    clip: {fileID: 8300000, guid: b52c5f23eca35d24c9f6816b7fca16ab, type: 3}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Portal

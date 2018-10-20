@@ -12,6 +12,7 @@ TagManager:
   - RadA
   - RadB
   - AudioManager
+  - PickupNotifGravity
   layers:
   - Default
   - TransparentFX
