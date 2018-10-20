@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: f152f3335dc0890479cd5d3cc002e763
   - enabled: 0
     path: Assets/Scenes/Demos/LightDemo.unity
     guid: c0cd09930aa9cc047ae87758b33d8fb8
@@ -17,6 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Demos/RadiationDemo.unity
     guid: 7cc26dbaee6549046bf6f8432681f9e7
+  - enabled: 0
+    path: Assets/Scenes/SceneC_Light.unity
+    guid: 371bbc9f3594289438106350dde8c235
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f152f3335dc0890479cd5d3cc002e763
   - enabled: 1
     path: Assets/Scenes/SceneA_Radiation.unity
     guid: 3b45086a4a2e0394783a70eb8b0ddc10
@@ -24,8 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneB_Gravity.unity
     guid: 44ab9ceeb301a784fade4d224852f6ee
   - enabled: 1
-    path: Assets/Scenes/SceneC_Light.unity
-    guid: 371bbc9f3594289438106350dde8c235
+    path: Assets/Scenes/SceneC2_Light.unity
+    guid: 04e1b5d7584294d4d909c92f07224529
   - enabled: 1
     path: Assets/Scenes/FinishMenu.unity
     guid: ad0efcb99c501a14485e8be5e385937c
