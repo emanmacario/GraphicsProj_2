@@ -432,6 +432,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222977940}
+--- !u!1001 &291751561
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.829239
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 17.388569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.2178617
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719449810699342, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944014536377552, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a744bf6071671454ca7a81b29d48848a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &314731476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,67 +3132,12 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1397240044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1397240045}
-  - component: {fileID: 1397240046}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1397240045
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1397240044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.829239, y: 17.388569, z: 6.2178617}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1397240046
+--- !u!114 &1397240046 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1397240044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114512090952686412, guid: a744bf6071671454ca7a81b29d48848a,
+    type: 2}
+  m_PrefabInternal: {fileID: 291751561}
   m_Script: {fileID: 11500000, guid: 5963c9e7dd065e64db38cc3dc4cdd4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: ClickButtonMain
-    clip: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
-    volume: 0.414
-    loop: 0
-    source: {fileID: 0}
-  - name: Play
-    clip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
-    volume: 0.481
-    loop: 0
-    source: {fileID: 0}
-  - name: Quit
-    clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
-    volume: 0.481
-    loop: 0
-    source: {fileID: 0}
-  - name: MainMenuTheme
-    clip: {fileID: 8300000, guid: 5c1b387bde617884799e9f0f7ff4b01d, type: 3}
-    volume: 0.534
-    loop: 1
-    source: {fileID: 0}
 --- !u!1 &1457856233
 GameObject:
   m_ObjectHideFlags: 0
