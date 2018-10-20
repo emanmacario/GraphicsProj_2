@@ -30,6 +30,7 @@ public class PlayerHealthBehaviour : MonoBehaviour {
     public void Update() {
         em = ps.emission;
         em.rateOverTime = health * 100;
+        mr.material.SetColor("_Color", Color.Lerp(Color.red, Color.green, (startHealth-health)/startHealth));
     }
 
     public void OnCollisionStay(Collision c) {
