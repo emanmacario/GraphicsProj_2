@@ -54,6 +54,8 @@ public class ShootAbility : MonoBehaviour {
             if (L && timeFiredAgoA > fireDelayA) fireA(target);
             if (R && timeFiredAgoB > fireDelayB) fireB(target);
         }
+        // Debugging hack, remove later
+        if (Input.GetKeyDown("s")) recoilForceA = 100;
     }
 
 }
