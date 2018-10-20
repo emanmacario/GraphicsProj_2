@@ -3130,14 +3130,22 @@ MonoBehaviour:
   - name: ClickButtonMain
     clip: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
     volume: 0.414
+    loop: 0
     source: {fileID: 0}
   - name: Play
     clip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
     volume: 0.481
+    loop: 0
     source: {fileID: 0}
   - name: Quit
     clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
     volume: 0.481
+    loop: 0
+    source: {fileID: 0}
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: 5c1b387bde617884799e9f0f7ff4b01d, type: 3}
+    volume: 0.534
+    loop: 1
     source: {fileID: 0}
 --- !u!1 &1457856233
 GameObject:
