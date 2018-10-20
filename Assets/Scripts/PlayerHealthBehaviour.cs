@@ -15,7 +15,12 @@ public class PlayerHealthBehaviour : MonoBehaviour {
 
     private void playerDies() {
         rb.detectCollisions = false;
+        ps.Play();
         Console.WriteLine("Player died, go to finish screen");
+    }
+
+    public void reflectHealth() {
+        mr.material.SetColor("_Color", Color.Lerp(Color.red, Color.green, (startHealth-health)/startHealth));
     }
 
     public void Start() {
@@ -24,13 +29,11 @@ public class PlayerHealthBehaviour : MonoBehaviour {
         mr = this.gameObject.GetComponent<MeshRenderer>();
         ps = GetComponent<ParticleSystem>();
         em = ps.emission;
-        ps.Play();
+        ps.Stop();
     }
 
     public void Update() {
-        em = ps.emission;
-        em.rateOverTime = health * 100;
-        mr.material.SetColor("_Color", Color.Lerp(Color.red, Color.green, (startHealth-health)/startHealth));
+        reflectHealth();
     }
 
     public void OnCollisionStay(Collision c) {
