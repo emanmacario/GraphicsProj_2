@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d518c21d3aed3442a1b223536643094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 10
 --- !u!135 &135345397865664798
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -207,7 +207,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1131136374947926}
   serializedVersion: 5
-  lengthInSec: 10
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   looping: 1
