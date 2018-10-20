@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33423979513168790}
   - component: {fileID: 23131947504535608}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Halo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
