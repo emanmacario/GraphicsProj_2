@@ -9,6 +9,8 @@ TagManager:
   - PlatV2
   - NextLevel
   - Enemy
+  - RadA
+  - RadB
   layers:
   - Default
   - TransparentFX
