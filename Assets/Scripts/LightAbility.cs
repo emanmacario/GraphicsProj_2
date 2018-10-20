@@ -6,8 +6,9 @@ public class LightAbility : MonoBehaviour {
     public float radius = 5;
 	public float speed = 5;
     public float growFactor = 4;
-	public Transform halo;
-
+	
+	private Transform halo;
+	private GameObject haloObj;
     private Renderer rend;
     private Shader defaultShader;
     private Shader invisibleShader;
@@ -23,9 +24,16 @@ public class LightAbility : MonoBehaviour {
         defaultShader = rend.material.shader;
         invisibleShader = Shader.Find("Unlit/Invisible");
         invisible = false;
+		
     }
 
     public void Update() {
+		if (halo == null) {
+			haloObj = Instantiate(Resources.Load("Halo")) as GameObject;
+			halo = haloObj.GetComponent<Transform>();
+			halo.parent = this.transform;
+			halo.localScale = halo.localPosition = Vector3.zero;
+		}
         if (Input.GetKeyDown("r")) {
             rend.material.shader = (invisible) ? defaultShader : invisibleShader;
             invisible = !invisible;

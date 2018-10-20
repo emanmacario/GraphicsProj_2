@@ -20,4 +20,14 @@ public class EnemyBehaviour : MonoBehaviour {
         rb.AddForce(Time.deltaTime * agility * dir);
     }
 
+    public void OnTriggerEnter(Collider c) {
+        String t = c.tag;
+        Vector3 dir = (this.transform.position - player.transform.position).normalized;
+        if (t.Equals("RadA")) {
+            rb.AddForce(100 * dir);
+        } else if (t.Equals("RadB")) {
+            rb.AddForce(1000 * dir);
+        }
+    }
+
 }

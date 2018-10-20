@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54827291727554840}
   - component: {fileID: 114481720999519494}
   m_Layer: 0
-  m_Name: RadEnemy
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
