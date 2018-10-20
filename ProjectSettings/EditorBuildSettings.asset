@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneC_Light.unity
     guid: 371bbc9f3594289438106350dde8c235
+  - enabled: 1
+    path: Assets/Scenes/FinishMenu.unity
+    guid: ad0efcb99c501a14485e8be5e385937c
   m_configObjects: {}
