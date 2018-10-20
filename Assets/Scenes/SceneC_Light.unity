@@ -3217,7 +3217,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'GRAVITY ACQUIRED
+  m_text: 'ANTIGRAV ACQUIRED
 
     F -> FLIP GRAVITY'
   m_isRightToLeft: 0
@@ -3287,7 +3287,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2020984588}
-    characterCount: 34
+    characterCount: 35
     spriteCount: 0
     spaceCount: 5
     wordCount: 6
