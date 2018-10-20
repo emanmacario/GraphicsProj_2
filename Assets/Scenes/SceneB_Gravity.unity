@@ -395,12 +395,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1505720366}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -611.5, y: -302}
+  m_AnchoredPosition: {x: -16, y: -5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243397726
@@ -1513,7 +1513,7 @@ Prefab:
     - target: {fileID: 224404702127261318, guid: 6cce333e5cdd71c448d386ff7de4630e,
         type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 224404702127261318, guid: 6cce333e5cdd71c448d386ff7de4630e,
         type: 2}
@@ -1553,7 +1553,7 @@ Prefab:
     - target: {fileID: 224404702127261318, guid: 6cce333e5cdd71c448d386ff7de4630e,
         type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 224404702127261318, guid: 6cce333e5cdd71c448d386ff7de4630e,
         type: 2}
@@ -1673,11 +1673,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cce333e5cdd71c448d386ff7de4630e, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1505720366 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224404702127261318, guid: 6cce333e5cdd71c448d386ff7de4630e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1505720365}
 --- !u!1001 &1521018357
 Prefab:
   m_ObjectHideFlags: 0
