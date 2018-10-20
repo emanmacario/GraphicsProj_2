@@ -10,6 +10,8 @@ public class LevelProgressionAbility : MonoBehaviour {
 
     private static const float PORTAL_SOUND_TIME = 1.0f;
     private static const float FREEZE_SCENE = 0.0f;
+
+    private MeshRenderer mr;
     private AudioManager am;
     private PauseManager pm;
 
@@ -18,6 +20,7 @@ public class LevelProgressionAbility : MonoBehaviour {
     }
 
     public void Start() {
+        mr = this.gameObject.GetComponent<MeshRenderer>();
         am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
         pm = new PauseManager(this, PORTAL_SOUND_TIME, FREEZE_SCENE, nextScene);
     }
@@ -26,6 +29,7 @@ public class LevelProgressionAbility : MonoBehaviour {
         String t = c.tag;
         if (t.Equals("NextLevel")) {
             am.Play("Portal");
+            mr.enabled = false;
             pm.StartPause();
         }
     }
