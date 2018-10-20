@@ -1,9 +1,8 @@
 ﻿Shader "Unlit/LovelyShader" {	
 	Properties {
 		_Color("Color", Color) = (1, 1, 1, 1)
-		_MainTex("Albedo (RGB)", 2D) = "white" {}
-		_invPla("Invisible player position", Vector) = (0,0,100)
-		_invRad("Radius of invisibility", Float) = -1
+		_MainTex("Albedo (RGB)", 2D) = "white"
+		_amb ("Ambient Light", Float) = 0
 		_t1("Threshold 1", Float) = 0
 		_l1("Level 1", Float) = 0
 		_t2("Threshold 2", Float) = 0.3
@@ -24,7 +23,7 @@
 		
 		#include "UnityCG.cginc"
 		
-		uniform float _t1,_t2,_t3,_l1,_l2,_l3;
+		uniform float _t1,_t2,_t3,_l1,_l2,_l3, _amb;
 
 
 		half4 LightingCelShadingForward(SurfaceOutput s, half3 lightDir, half atten) {
@@ -36,28 +35,23 @@
 			else NdotL = 1;
 			
 			half4 c;
-			c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten * 2);
+			c.rgb = s.Albedo * _LightColor0.rgb * ((NdotL * atten * 2) + _amb);
 			c.a = s.Alpha;
 			return c;
 		}
 
 		sampler2D _MainTex;
 		fixed4 _Color;
-		fixed3 _invPla;
-		float _invRad;
 
 		struct Input {
 			float2 uv_MainTex;
-			float3 worldPos;
 		};
 
 		void surf(Input IN, inout SurfaceOutput o) {
 			// Albedo comes from a texture tinted by color
 			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
-			
-			if (length(_invPla - IN.worldPos) < _invRad) o.Alpha = 0;
-			else o.Alpha = c.a;
+			o.Alpha = c.a;
 		}
 		ENDCG
 	}
