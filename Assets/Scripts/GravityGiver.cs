@@ -7,10 +7,8 @@ public class GravityGiver : MonoBehaviour {
     private bool given = false;
 
     public void OnTriggerEnter(Collider c) {
-        Console.WriteLine("TriggerEnter ->");
-        Console.WriteLine(c.name);
-        Console.WriteLine(c.tag);
-        if (!given) {
+        String t = c.tag;
+        if (t.Equals("Player") && !given) {
             c.gameObject.AddComponent<GravityAbility>();
             given = true;
         }
