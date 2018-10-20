@@ -4,41 +4,55 @@ using System.Collections;
 
 public class ShootAbility : MonoBehaviour {
 
-    public float recoilForce = 20;
-    public float fireDelay = 0.1f;
     public GameObject typeA;
     public GameObject typeB;
+    public float recoilForceA = 5;
+    public float recoilForceB = 40;
+    public float fireDelayA = 0.5f;
+    public float fireDelayB = 2.0f;
 
     private Camera cam;
     private Transform tf;
     private Rigidbody rb;
-    private float timeFiredAgo;
+    private float timeFiredAgoA;
+    private float timeFiredAgoB;
 
-    private void fire(GameObject type, Vector3 target) {
-        GameObject g = Instantiate(type, tf.position, Quaternion.identity);
+    private void fireA(Vector3 target) {
+        GameObject g = Instantiate(typeA, tf.position, Quaternion.identity);
         ProjectileBehaviour p = g.GetComponent<ProjectileBehaviour>();
         Vector3 dir = target - tf.position;
         p.setDir(dir);
-        rb.AddForce(recoilForce * -dir);
+        rb.AddForce(recoilForceA * -dir);
+        timeFiredAgoA = 0;
+    }
+
+    private void fireB(Vector3 target) {
+        GameObject g = Instantiate(typeB, tf.position, Quaternion.identity);
+        ProjectileBehaviour p = g.GetComponent<ProjectileBehaviour>();
+        Vector3 dir = target - tf.position;
+        p.setDir(dir);
+        rb.AddForce(recoilForceB * -dir);
+        timeFiredAgoB = 0;
     }
 
     public void Start() {
         cam = Camera.main;
         tf = this.gameObject.transform;
         rb = this.gameObject.GetComponent<Rigidbody>();
-        timeFiredAgo = 0;
+        timeFiredAgoA = 0;
+        timeFiredAgoB = 0;
     }
 
     public void Update() {
-        timeFiredAgo += Time.deltaTime;
+        timeFiredAgoA += Time.deltaTime;
+        timeFiredAgoB += Time.deltaTime;
         bool L = Input.GetMouseButton(0);
         bool R = Input.GetMouseButton(1);
-        if ((L || R) && (timeFiredAgo > fireDelay)) {
+        if (L || R) {
             Vector2 mouse = Input.mousePosition;
             Vector3 target = cam.ScreenToWorldPoint(new Vector3(mouse.x, mouse.y, -cam.gameObject.transform.position.z));
-            if (L) fire(typeA, target);
-            if (R) fire(typeB, target);
-            timeFiredAgo = 0;
+            if (L && timeFiredAgoA > fireDelayA) fireA(target);
+            if (R && timeFiredAgoB > fireDelayB) fireB(target);
         }
     }
 
