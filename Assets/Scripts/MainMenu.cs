@@ -7,11 +7,15 @@ public class MainMenu : MonoBehaviour {
 
 	public void PlayGame() {
 		// Load the next scene according to the build settings scene indexes
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		Invoke("LoadNextScene", 2.0f);
 	}
 
 	public void QuitGame() {
 		Debug.Log("Quit game successfully");
 		Application.Quit();
+	}
+
+	private void LoadNextScene() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }
