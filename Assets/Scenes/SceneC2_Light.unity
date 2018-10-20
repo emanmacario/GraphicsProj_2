@@ -1250,7 +1250,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1920454244379026, guid: 3c7ac09468712994d90a1d548d1692fb,
     type: 2}
   m_PrefabInternal: {fileID: 2078729141}
---- !u!114 &855213838
+--- !u!114 &855213842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1905,7 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3df08178afce7438173a4a95298c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelProgressionObject: {fileID: 0}
+  levelProgressionObject: {fileID: 2092706910}
 --- !u!114 &1377039069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,3 +3166,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a079ed558974cd46858a749a19ea718, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2092706910 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1386606240027294, guid: 295b3f45d23ebb04bb5ec8fd687f2c2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 605749196}
