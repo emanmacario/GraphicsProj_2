@@ -8,6 +8,7 @@ TagManager:
   - JumpDown
   - PlatV2
   - NextLevel
+  - Enemy
   layers:
   - Default
   - TransparentFX
