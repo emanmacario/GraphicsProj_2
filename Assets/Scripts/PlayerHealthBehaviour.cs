@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthBehaviour : MonoBehaviour {
 
@@ -12,11 +13,12 @@ public class PlayerHealthBehaviour : MonoBehaviour {
     private MeshRenderer mr;
     private ParticleSystem ps;
     private ParticleSystem.EmissionModule em;
+    private PauseManager pm;
 
     private void playerDies() {
         rb.detectCollisions = false;
         ps.Play();
-        Console.WriteLine("Player died, go to finish screen");
+        pm.StartPause();
     }
 
     public void reflectHealth() {
@@ -29,6 +31,7 @@ public class PlayerHealthBehaviour : MonoBehaviour {
         mr = this.gameObject.GetComponent<MeshRenderer>();
         ps = GetComponent<ParticleSystem>();
         em = ps.emission;
+        pm = new PauseManager(this, 5.0f, 1.0f, () => SceneManager.LoadScene("MainMenu"));
         ps.Stop();
     }
 
